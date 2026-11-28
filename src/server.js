@@ -10,7 +10,6 @@ const app = createApp()
 const httpServer = http.createServer(app)
 const io = new SocketIOServer(httpServer,{
   cors:{
-
     origin: env.CORS_ORIGIN.split(',').map(origin => origin.trim()),
     methods: ['GET', 'POST'],
     credentials: true
